@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="atv 2"
-run/main_scene="uid://b7b7g6s26cgld"
+run/main_scene="uid://r4pjs6hssfhy"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 

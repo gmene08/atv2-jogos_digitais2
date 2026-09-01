@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="practice"
+config/name="atv 2"
 run/main_scene="uid://b7b7g6s26cgld"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"

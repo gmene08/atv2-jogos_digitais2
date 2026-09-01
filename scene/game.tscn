@@ -13,7 +13,7 @@ size = Vector2(20, 187)
 metadata/_edit_vertical_guides_ = [590.0]
 
 [node name="Player" parent="." unique_id=117367832 instance=ExtResource("1_5kiuu")]
-position = Vector2(251, 92)
+position = Vector2(242, 118)
 
 [node name="tiles" type="Node2D" parent="." unique_id=1819371340]
 

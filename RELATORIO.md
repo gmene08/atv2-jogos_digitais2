@@ -4,9 +4,11 @@
 
 **Forest (floresta de outono)**
 Tema: uma floresta de outono, com camadas de árvores ao fundo e folhas caindo na frente.
+
 O que o jogador faz: corre para a direita por um relevo de colinas e pequenos vãos, precisa
 pular os buracos sem cair, passa pela parede falsa que esconde a área secreta e sai pela zona
 de fim de fase na ponta direita do mapa (tile ~70), que carrega a fase seguinte.
+
 Decisão de desenho: a "parede falsa" foi feita como uma segunda camada de tiles (`FakeTerrain`)
 usando um TileSet **sem camada de física**, em cima de um buraco de 2×2 que abri na camada de
 colisão real. Fiz assim, em vez de só esconder um `Area2D` atrás do cenário, porque o bloco
@@ -14,28 +16,27 @@ falso fica visualmente idêntico ao resto do chão — a passagem não se denunc
 
 **Tropic (praia tropical)**
 Tema: costa tropical, céu limpo, nuvens e duas faixas de água animada ao fundo.
+
 O que o jogador faz: essa fase é uma **subida** — em vez de andar para o lado, ele escala as
 plataformas de terra de baixo para cima até o topo do mapa (a zona de fim de fase fica lá em
 cima, em `y ≈ -424`), e ao alcançá-la o jogo volta para a fase inicial.
+
 Decisão de desenho: no parallax dessa fase o eixo vertical anda pela metade do horizontal
 (`motion_scale.y = motion_scale.x / 2`) e o céu fica **totalmente travado** (`0, 0`). Numa
 subida longa, se o céu deslizasse junto com a câmera na mesma proporção, a sensação de
 profundidade quebrava e dava um leve enjoo visual; amortecer o Y resolveu.
 
-> Obs.: `game.tscn` é a tela de treino/entrada (chão plano, sem parallax), onde o jogador só
-> aprende a andar e pular antes de cair na Forest.
-
 ## 2. O parallax
 
 **Forest** — camadas do fundo para a frente (todas com `motion_scale` X = Y):
 
-| Camada | motion_scale | Papel |
+| Camada | motion_scale | 
 |---|---|---|
-| 6 – Distant trees | 0.1 | horizonte |
-| 5 – Tree row BG 2 | 0.2 | |
-| 4 – Tree row BG 1 | 0.3 | |
-| 3 – Bottom leaf piles | 0.4 | |
-| 2 – Trees | 0.5 | plano médio |
+| 6 – Distant trees | 0.1 | 
+| 5 – Tree row BG 2 | 0.2 | 
+| 4 – Tree row BG 1 | 0.3 | 
+| 3 – Bottom leaf piles | 0.4 | 
+| 2 – Trees | 0.5 |
 | 1 – Leaf top | **1.2** | primeiro plano (passa mais rápido que a câmera) |
 
 **Tropic** — do fundo para a frente:
@@ -64,8 +65,7 @@ O que mudou da primeira tentativa para a final:
 ## 3. A área secreta
 
 - **Onde está a pista:** na fase Forest, numa quebra no desenho do chão logo antes da parede —
-  a fileira de tiles decorativos e o recorte do relevo "apontam" para um trecho de parede que
-  não tem a mesma borda de terra que o resto. É uma dica visual, não um aviso escrito.
+  a fileira de tiles decorativos e o recorte do relevo "apontam" para um trecho de parede. É uma dica visual, não um aviso escrito.
 - **Onde está a entrada:** alguns tiles à frente da pista, num pedaço de parede que **parece
   sólido mas não tem colisão** (a camada `FakeTerrain`). O jogador anda para dentro dela e cai
   numa câmara escondida; lá dentro está o `Area2D` (`secret`) que dispara a troca de cena.

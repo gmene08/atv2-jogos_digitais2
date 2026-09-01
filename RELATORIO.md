@@ -30,13 +30,13 @@ profundidade quebrava e dava um leve enjoo visual; amortecer o Y resolveu.
 
 **Forest** — camadas do fundo para a frente (todas com `motion_scale` X = Y):
 
-| Camada | motion_scale | 
+| Camada | motion_scale | Papel |
 |---|---|---|
-| 6 – Distant trees | 0.1 | 
-| 5 – Tree row BG 2 | 0.2 | 
-| 4 – Tree row BG 1 | 0.3 | 
-| 3 – Bottom leaf piles | 0.4 | 
-| 2 – Trees | 0.5 |
+| 6 – Distant trees | 0.1 | horizonte |
+| 5 – Tree row BG 2 | 0.2 | |
+| 4 – Tree row BG 1 | 0.3 | |
+| 3 – Bottom leaf piles | 0.4 | |
+| 2 – Trees | 0.5 | plano médio |
 | 1 – Leaf top | **1.2** | primeiro plano (passa mais rápido que a câmera) |
 
 **Tropic** — do fundo para a frente:

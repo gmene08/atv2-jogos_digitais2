@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bi3po4vmmray4" path="res://scripts/player.gd" id="1_merdl"]
 [ext_resource type="Texture2D" uid="uid://dqwwb3tvbo60l" path="res://sprites/1 - Penguin/Idle (16 x 16).png" id="2_b0kkn"]
+[ext_resource type="Texture2D" uid="uid://8uafta6hswya" path="res://sprites/1 - Penguin/Ducking (16 x 16).png" id="2_qly61"]
 [ext_resource type="Texture2D" uid="uid://dy0iy1nosn366" path="res://sprites/1 - Penguin/Jump (16 x 16).png" id="3_rfe5m"]
 [ext_resource type="Texture2D" uid="uid://crurrupnpugeo" path="res://sprites/1 - Penguin/Waddling (16 x 16).png" id="4_qly61"]
 
@@ -61,6 +62,14 @@ region = Rect2(80, 0, 16, 16)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("2_qly61")
+}],
+"loop": 1,
+"name": &"duck",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_e4p34")
 }, {
 "duration": 1.0,
@@ -117,11 +126,10 @@ collision_mask = 9
 script = ExtResource("1_merdl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1380776711]
-visible = false
+position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_xrivr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1665153111]
 z_index = 1
 sprite_frames = SubResource("SpriteFrames_xrivr")
-animation = &"jump"
-autoplay = "idle"
+animation = &"idle"

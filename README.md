@@ -1,3 +1,3 @@
-# atv 2
+# Meu Jogo 
 
-Eu não gostei do que eu fiz no primeiro projeto e comecei outro do zero.
+Jogo para realização das atividades a partir da 2º

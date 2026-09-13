@@ -1,0 +1,28 @@
+[gd_scene format=4 uid="uid://j15xi1rcnnwx"]
+
+[ext_resource type="TileSet" uid="uid://dg2wxjhk20aja" path="res://tiles/terrain.tres" id="1_4rp7f"]
+[ext_resource type="PackedScene" uid="uid://drk8wtjqwcocf" path="res://entities/camera.tscn" id="2_q3csx"]
+[ext_resource type="PackedScene" uid="uid://mfryuxqysduw" path="res://entities/jogador.tscn" id="3_0208p"]
+[ext_resource type="PackedScene" uid="uid://7yno8aka4j1n" path="res://entities/zumbi_lento.tscn" id="4_hkrii"]
+[ext_resource type="PackedScene" uid="uid://c2ngwqryfnqs1" path="res://entities/zumbi_rapido.tscn" id="5_rql4k"]
+[ext_resource type="PackedScene" uid="uid://b5yv1nhon573u" path="res://entities/zumbi_grande.tscn" id="6_t8yet"]
+
+[node name="atv4" type="Node2D" unique_id=1138971222]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2047831147]
+tile_map_data = PackedByteArray("AAAAAAwAAAACAAMAAAABAAwAAAACAAMAAAACAAwAAAACAAMAAAADAAwAAAACAAMAAAAEAAwAAAACAAMAAAAFAAwAAAACAAMAAAAGAAwAAAACAAMAAAAHAAwAAAACAAMAAAAIAAwAAAACAAMAAAAJAAwAAAACAAMAAAAKAAwAAAACAAMAAAALAAwAAAACAAMAAAAMAAwAAAACAAMAAAANAAwAAAACAAMAAAAOAAwAAAACAAMAAAAPAAwAAAACAAMAAAAQAAwAAAACAAMAAAARAAwAAAACAAMAAAASAAwAAAACAAMAAAATAAwAAAACAAMAAAAUAAwAAAACAAMAAAAVAAwAAAACAAMAAAAWAAwAAAACAAMAAAAXAAwAAAACAAMAAAAYAAwAAAACAAMAAAAZAAwAAAACAAMAAAAaAAwAAAACAAMAAAAbAAwAAAACAAMAAAAcAAwAAAACAAMAAAAdAAwAAAACAAMAAAAeAAwAAAACAAMAAAAfAAwAAAACAAMAAAAgAAwAAAACAAMAAAAhAAwAAAACAAMAAAAiAAwAAAACAAMAAAAjAAwAAAACAAMAAAAkAAwAAAACAAMAAAAlAAwAAAACAAMAAAAmAAwAAAACAAMAAAAnAAwAAAACAAMAAAAoAAwAAAACAAMAAAA=")
+tile_set = ExtResource("1_4rp7f")
+
+[node name="Camera" parent="." unique_id=1348314799 instance=ExtResource("2_q3csx")]
+
+[node name="jogador" parent="." unique_id=1880567601 instance=ExtResource("3_0208p")]
+position = Vector2(254, 148)
+
+[node name="zumbi_lento" parent="." unique_id=839425024 instance=ExtResource("4_hkrii")]
+position = Vector2(512, 148)
+
+[node name="zumbi2" parent="." unique_id=95830843 instance=ExtResource("5_rql4k")]
+position = Vector2(422, 146)
+
+[node name="zumbi" parent="." unique_id=455420078 instance=ExtResource("6_t8yet")]
+position = Vector2(610, 143)

@@ -12,7 +12,7 @@ func _process(_delta: float) -> void:
 	position = target.position
 
 func get_target():
-	var nodes = get_tree().get_nodes_in_group("Player")
+	var nodes = get_tree().get_nodes_in_group("player")
 	if nodes.size() == 0:
 		push_error("Player not found")
 		return

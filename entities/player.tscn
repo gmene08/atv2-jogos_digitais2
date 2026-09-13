@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b2p5n1breg2t4"]
+[gd_scene load_steps=20 format=3 uid="uid://b2p5n1breg2t4"]
 
 [ext_resource type="Script" uid="uid://bi3po4vmmray4" path="res://scripts/player.gd" id="1_merdl"]
 [ext_resource type="Texture2D" uid="uid://dqwwb3tvbo60l" path="res://sprites/1 - Penguin/Idle (16 x 16).png" id="2_b0kkn"]
@@ -64,7 +64,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_qly61")
 }],
-"loop": 1,
+"loop": true,
 "name": &"duck",
 "speed": 5.0
 }, {
@@ -84,7 +84,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_6nm46")
 }],
-"loop": 1,
+"loop": true,
 "name": &"idle",
 "speed": 10.0
 }, {
@@ -92,7 +92,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_i623q")
 }],
-"loop": 1,
+"loop": true,
 "name": &"jump",
 "speed": 5.0
 }, {
@@ -115,21 +115,21 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_q0i8f")
 }],
-"loop": 1,
+"loop": true,
 "name": &"walk",
 "speed": 10.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=117367832 groups=["Player"]]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 2
 collision_mask = 9
 script = ExtResource("1_merdl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1380776711]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_xrivr")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1665153111]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 1
 sprite_frames = SubResource("SpriteFrames_xrivr")
 animation = &"idle"
